@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import globalStyles from "../styles/global.css?raw";
 ---
 
 <!doctype html>
@@ -12,6 +12,7 @@ import "../styles/global.css";
       content="Fernando Miramontes Forattini is a Marie Skłodowska-Curie Postdoctoral Fellow studying power, governance, inequality, and technology."
     />
     <title>Fernando Miramontes Forattini | Historical Sociology, Governance, and Sociotechnical Systems</title>
+    <style is:global set:html={globalStyles}></style>
   </head>
   <body>
     <header class="site-header" aria-label="Site header">
