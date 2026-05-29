@@ -1,5 +1,4 @@
 const story = document.querySelector("[data-story]");
-const path = document.querySelector("[data-story-path]");
 const title = document.querySelector("[data-story-title]");
 const kicker = document.querySelector("[data-story-kicker]");
 const copy = document.querySelector("[data-story-copy]");
@@ -8,9 +7,12 @@ const actions = document.querySelector("[data-story-actions]");
 const primaryAction = document.querySelector("[data-story-primary]");
 const secondaryAction = document.querySelector("[data-story-secondary]");
 const panels = Array.from(document.querySelectorAll("[data-story-step]"));
-const drawings = Array.from(document.querySelectorAll("[data-drawing]"));
+const images = Array.from(document.querySelectorAll("[data-story-image]"));
+const thread = document.querySelector("[data-story-thread]");
+const dots = Array.from(document.querySelectorAll("[data-story-dot]"));
 
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+const easeOut = (value) => 1 - Math.pow(1 - clamp(value), 2);
 
 const setText = (index) => {
   const panel = panels[index];
@@ -29,61 +31,76 @@ const setText = (index) => {
   if (primaryAction) {
     primaryAction.textContent = panel.dataset.primaryLabel || "";
     primaryAction.href = panel.dataset.primaryHref || "#";
+    primaryAction.toggleAttribute("download", (panel.dataset.primaryHref || "").endsWith(".docx"));
     primaryAction.classList.toggle("is-hidden", !hasPrimary);
   }
 
   if (secondaryAction) {
     secondaryAction.textContent = panel.dataset.secondaryLabel || "";
     secondaryAction.href = panel.dataset.secondaryHref || "#";
+    secondaryAction.toggleAttribute("download", (panel.dataset.secondaryHref || "").endsWith(".docx"));
     secondaryAction.classList.toggle("is-hidden", !hasSecondary);
   }
 
-  drawings.forEach((drawing) => {
-    drawing.classList.toggle("is-visible", drawing.dataset.drawing === String(index));
+  images.forEach((image) => {
+    image.classList.toggle("is-visible", image.dataset.storyImage === String(index));
   });
 };
 
 let activeIndex = -1;
-let pathLength = 0;
 
-const measure = () => {
-  if (!path) return;
-  pathLength = path.getTotalLength();
-  path.style.strokeDasharray = `${pathLength}`;
-  path.style.strokeDashoffset = `${pathLength}`;
+const updateImages = (index, segmentProgress) => {
+  const imageProgress = easeOut(segmentProgress);
+  const opacity = 0.18 + imageProgress * 0.64;
+  const scale = 1.02 + imageProgress * 0.035;
+
+  images.forEach((image) => {
+    if (image.dataset.storyImage === String(index)) {
+      image.style.setProperty("--story-image-opacity", opacity.toFixed(3));
+      image.style.setProperty("--story-image-scale", scale.toFixed(3));
+      image.style.setProperty("--story-image-progress", imageProgress.toFixed(3));
+    } else {
+      image.style.setProperty("--story-image-opacity", "0");
+      image.style.setProperty("--story-image-scale", "1.02");
+      image.style.setProperty("--story-image-progress", "0");
+    }
+  });
+};
+
+const updateThread = (index, progress) => {
+  thread?.style.setProperty("--story-thread-progress", `${progress * 100}%`);
+
+  dots.forEach((dot) => {
+    const dotIndex = Number(dot.dataset.storyDot);
+    dot.classList.toggle("is-active", dotIndex === index);
+    dot.classList.toggle("is-past", dotIndex < index);
+  });
 };
 
 const update = () => {
-  if (!story || !path || panels.length === 0) return;
+  if (!story || panels.length === 0) return;
 
   const rect = story.getBoundingClientRect();
   const max = Math.max(1, rect.height - window.innerHeight);
-  const progress = Math.min(1, Math.max(0, -rect.top / max));
+  const progress = clamp(-rect.top / max);
   const index = Math.min(panels.length - 1, Math.floor(progress * panels.length));
+  const segmentProgress = clamp(progress * panels.length - index);
 
   if (index !== activeIndex) {
     activeIndex = index;
     setText(index);
   }
 
-  if (!reduceMotion) {
-    path.style.strokeDashoffset = `${pathLength * (1 - progress)}`;
-  } else {
-    path.style.strokeDashoffset = "0";
-  }
-
+  updateImages(index, segmentProgress);
+  updateThread(index, progress);
   document.documentElement.style.setProperty("--story-progress", String(progress));
 };
 
-measure();
 setText(0);
 update();
 
 window.addEventListener("scroll", update, { passive: true });
-window.addEventListener("resize", () => {
-  measure();
-  update();
-});
+window.addEventListener("resize", update);
 
 const menuButton = document.querySelector("[data-menu-button]");
 const siteNav = document.querySelector("[data-site-nav]");

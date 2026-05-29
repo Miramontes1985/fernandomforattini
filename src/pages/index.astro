@@ -24,10 +24,10 @@ import globalStyles from "../styles/global.css?raw";
       <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
         <a href="#agenda">Agenda</a>
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
+        <a href="/publications/">Publications</a>
         <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
+        <a href="#projects">Projects</a>
+        <a href="/cv/fernando-miramontes-forattini-cv.docx" download>CV</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -41,88 +41,217 @@ import globalStyles from "../styles/global.css?raw";
       <section class="intro-story" data-story aria-label="Research story">
         <div class="story-pin">
           <div class="story-stage" aria-hidden="true">
-            <svg class="story-line" viewBox="0 0 1600 900" role="img">
-              <path
-                data-story-path
-                class="story-route"
-                d="M 50 742 C 190 704, 276 722, 402 650 C 526 578, 590 522, 718 526 C 852 530, 892 622, 1022 592 C 1138 565, 1144 456, 1042 424 C 938 392, 808 440, 750 338 C 695 242, 802 180, 918 230 C 1038 282, 1034 400, 1156 404 C 1288 408, 1346 302, 1276 232 C 1208 162, 1065 176, 1010 98 C 964 34, 1034 18, 1132 78 C 1260 156, 1294 272, 1418 316 C 1510 348, 1580 326, 1640 278"
+            <div class="story-art">
+              <img
+                class="story-image is-visible"
+                data-story-image="0"
+                src="/story/research-trajectory.png"
+                alt=""
+                loading="eager"
               />
-
-              <g data-drawing="0" class="story-drawing">
-                <path d="M720 642 C 790 594, 850 586, 942 610 C 1038 635, 1100 620, 1176 572" />
-                <path d="M836 438 l58 -78 h232 l58 78 v156 h-348 z" />
-                <path d="M894 360 l64 68 h226" />
-                <path d="M958 428 v166" />
-                <path d="M872 492 h254" />
-                <path d="M902 540 h146" />
-                <path d="M742 704 C 840 650, 1004 664, 1124 706" />
+              <img
+                class="story-image"
+                data-story-image="1"
+                src="/story/institutions-traces.png"
+                alt=""
+                loading="eager"
+              />
+              <img
+                class="story-image"
+                data-story-image="2"
+                src="/story/power-practice.png"
+                alt=""
+                loading="eager"
+              />
+              <img
+                class="story-image"
+                data-story-image="3"
+                src="/story/technology-field.png"
+                alt=""
+                loading="eager"
+              />
+              <img
+                class="story-image"
+                data-story-image="4"
+                src="/story/agenda-sites.png"
+                alt=""
+                loading="eager"
+              />
+            </div>
+            <svg class="story-line" viewBox="0 0 900 760" role="img">
+              <g data-story-scene="0" class="story-scene" style="opacity: 0.62">
+                <path class="soft" d="M 46 300 C 112 284, 172 288, 232 306 C 306 328, 360 318, 430 288 C 500 258, 572 274, 632 304 C 706 342, 794 322, 864 290" />
+                <path class="soft" d="M 44 338 H 282 M 610 338 H 860" />
+                <path d="M 126 316 h78 v-54 h-78 z" />
+                <path d="M 142 280 h12 M 170 280 h12 M 142 302 h12 M 170 302 h12" />
+                <path d="M 228 318 h128" />
+                <path d="M 246 318 v-76 l50 -34 l50 34 v76" />
+                <path d="M 260 248 h72" />
+                <path d="M 276 318 v-40 h34 v40" />
+                <path d="M 296 208 v-30" />
+                <path d="M 536 336 c0 -52 18 -92 48 -120" />
+                <path d="M 588 336 c0 -48 16 -86 44 -112" />
+                <path d="M 498 556 h184 l60 40 v126 h-244 z" />
+                <path d="M 498 556 l58 -42 h184 l-58 42" />
+                <path d="M 682 556 l58 -42 v124 l-58 84" />
+                <path d="M 540 602 h88" />
+                <path d="M 540 634 h132" />
+                <path d="M 540 666 h94" />
+                <path d="M 546 512 h160" />
+                <path d="M 566 488 h118" />
+                <path d="M 588 464 h74" />
               </g>
 
-              <g data-drawing="1" class="story-drawing">
-                <path d="M792 604 C 858 548, 926 528, 1010 546 C 1102 566, 1166 534, 1234 470" />
-                <path d="M842 332 h246 l62 64 v246 h-308 z" />
-                <path d="M1088 332 v64 h62" />
-                <path d="M892 396 h138" />
-                <path d="M892 442 h196" />
-                <path d="M892 488 h122" />
-                <path d="M1046 530 c36 -34 91 -28 116 14 c28 48 -8 105 -64 102 c-52 -3 -86 -55 -52 -116 z" />
-                <path d="M1064 584 h82" />
-                <path d="M806 372 h-54 v224 h54" />
-                <path d="M782 414 h-54 v224 h54" />
+              <g data-story-scene="1" class="story-scene">
+                <path class="soft" d="M 72 600 H 844" />
+                <path d="M 160 162 h272 l42 42 v330 h-314 z" />
+                <path d="M 432 162 v42 h42" />
+                <path d="M 214 232 h142" />
+                <path d="M 214 276 h196" />
+                <path d="M 214 320 h152" />
+                <path d="M 214 362 h184" />
+                <path d="M 214 406 h118" />
+                <circle cx="216" cy="196" r="24" />
+                <path d="M 206 210 v-26 l20 12 l-20 12" />
+                <path d="M 362 288 h244 l48 48 v312 h-292 z" />
+                <path d="M 606 288 v48 h48" />
+                <path d="M 410 362 h168" />
+                <path d="M 410 410 h184" />
+                <path d="M 410 458 h112" />
+                <path d="M 196 426 h166 v182 h-166 z" />
+                <path d="M 222 470 h44 M 294 470 h44 M 222 526 h44 M 294 526 h44" />
+                <circle cx="334" cy="582" r="36" />
+                <path d="M 304 582 h60" />
+                <path d="M 316 560 c20 18 42 18 62 0" />
+                <path class="thin" d="M 486 590 c44 -28 102 -28 146 0" />
+                <path class="thin" d="M 500 636 h158" />
+                <path class="soft" d="M 632 144 h148 M 616 124 h128 M 654 104 h104" />
+                <path d="M 708 180 h108" />
+                <path d="M 728 180 v300" />
+                <path d="M 792 180 v300" />
+                <path d="M 682 480 h158" />
               </g>
 
-              <g data-drawing="2" class="story-drawing">
-                <path d="M758 624 C 850 584, 958 584, 1070 622 C 1142 646, 1202 638, 1264 604" />
-                <path d="M848 300 h342 v232 h-342 z" />
-                <path d="M848 386 h342" />
-                <path d="M930 334 h178" />
-                <path d="M910 452 h96" />
-                <path d="M1050 452 h84" />
-                <path d="M794 570 h468" />
-                <path d="M792 570 c-44 -48 -42 -108 6 -146 c36 -28 82 -26 116 4" />
-                <path d="M1188 570 c42 -50 42 -104 0 -150" />
-                <path d="M860 638 h340" />
+              <g data-story-scene="2" class="story-scene">
+                <path class="soft" d="M 54 642 H 820" />
+                <path d="M 236 156 v-124" />
+                <path d="M 470 156 v-124" />
+                <path d="M 178 156 h350 v74 h-350 z" />
+                <text x="206" y="204">PUBLIC SERVICE</text>
+                <path d="M 70 420 h560" />
+                <path d="M 70 420 v178 h560 v-178" />
+                <path d="M 174 598 v-150" />
+                <path d="M 366 598 v-150" />
+                <circle cx="174" cy="448" r="14" />
+                <circle cx="366" cy="448" r="14" />
+                <path d="M 146 610 h56 M 338 610 h56" />
+                <circle cx="272" cy="292" r="28" />
+                <path d="M 240 330 c0 56 54 82 102 46" />
+                <path d="M 254 374 v46" />
+                <path d="M 212 420 h116" />
+                <path d="M 380 336 h94 v84 h-94 z" />
+                <circle cx="572" cy="314" r="28" />
+                <path d="M 548 352 c12 58 46 88 94 94" />
+                <path d="M 592 394 v186" />
+                <path d="M 560 580 c20 26 52 28 78 0" />
+                <path d="M 672 244 h150 v222 h-150 z" />
+                <path d="M 704 292 h74" />
+                <path d="M 704 336 h96" />
+                <path d="M 704 380 h58" />
+                <path d="M 704 424 h86" />
               </g>
 
-              <g data-drawing="3" class="story-drawing">
-                <path d="M760 640 C 846 588, 932 590, 1032 636 C 1110 672, 1190 656, 1268 600" />
-                <path d="M842 302 h310 v218 h-310 z" />
-                <path d="M882 346 c58 46 122 46 192 0" />
-                <path d="M914 430 h168" />
-                <path d="M998 520 v56" />
-                <path d="M932 576 h132" />
-                <circle cx="1234" cy="298" r="30" />
-                <circle cx="1334" cy="390" r="24" />
-                <circle cx="1248" cy="494" r="28" />
-                <path d="M1256 320 l58 52" />
-                <path d="M1316 408 l-48 64" />
-                <path d="M1152 408 c64 -8 94 18 96 58" />
-                <circle cx="768" cy="518" r="32" />
-                <path d="M748 550 c-28 34 -36 70 -22 108" />
+              <g data-story-scene="3" class="story-scene">
+                <path d="M 94 220 h430 v292 h-430 z" />
+                <path d="M 94 220 h82 v292" />
+                <text x="120" y="292">AI</text>
+                <path d="M 216 286 h210" />
+                <path d="M 216 342 h172" />
+                <path d="M 216 412 h68 l48 -48 l58 64 l62 -112" />
+                <path d="M 282 512 v72" />
+                <path d="M 198 584 h246" />
+                <path d="M 524 326 C 600 308, 626 254, 666 170" />
+                <path d="M 524 380 C 608 392, 644 454, 682 538" />
+                <circle cx="666" cy="170" r="24" />
+                <circle cx="760" cy="292" r="24" />
+                <circle cx="682" cy="538" r="24" />
+                <circle cx="590" cy="424" r="20" />
+                <circle cx="594" cy="266" r="18" />
+                <path d="M 686 190 l54 84" />
+                <path d="M 740 310 l-130 106" />
+                <path d="M 596 284 l-4 122" />
+                <path d="M 824 640 c0 24 -52 42 -116 42 c-64 0 -116 -18 -116 -42" />
+                <path d="M 592 640 v-106 c0 24 52 42 116 42 c64 0 116 -18 116 -42 v106" />
+                <path d="M 592 534 c0 -24 52 -42 116 -42 c64 0 116 18 116 42" />
+                <path d="M 592 586 c0 24 52 42 116 42 c64 0 116 -18 116 -42" />
               </g>
 
-              <g data-drawing="4" class="story-drawing">
-                <path d="M746 640 C 830 578, 898 536, 984 494" />
-                <circle cx="988" cy="488" r="34" />
-                <path d="M988 454 v-108" />
-                <path d="M988 454 l-156 -102" />
-                <path d="M988 454 l158 -106" />
-                <path d="M988 522 l-82 118" />
-                <circle cx="832" cy="352" r="40" />
-                <circle cx="1146" cy="348" r="40" />
-                <circle cx="906" cy="640" r="40" />
-                <path d="M812 368 h40" />
-                <path d="M822 336 h20 v32" />
-                <path d="M1122 344 h48" />
-                <path d="M1130 368 h32" />
-                <path d="M888 624 c18 -16 42 -16 60 0" />
-                <path d="M886 650 h42" />
+              <g data-story-scene="4" class="story-scene">
+                <path class="soft" d="M 76 178 H 360" />
+                <path d="M 130 168 h156" />
+                <path d="M 154 168 v-82 l54 -40 l54 40 v82" />
+                <path d="M 166 94 h84" />
+                <path d="M 208 46 v-34" />
+                <path d="M 208 12 h54 l-16 20 l16 20 h-54" />
+                <path d="M 88 168 v-58 h50 v58" />
+                <path d="M 286 168 v-58 h58 v58" />
+                <path class="soft" d="M 590 202 c82 -40 178 -34 252 18" />
+                <path d="M 612 190 h150 v-126 h-150 z" />
+                <path d="M 640 104 h14 M 688 104 h14 M 736 104 h14 M 640 152 h14 M 688 152 h14 M 736 152 h14" />
+                <path class="soft" d="M 568 438 H 848" />
+                <path d="M 624 424 v-78 l58 -44 l58 44 v78" />
+                <path d="M 600 352 l82 -64 l82 64" />
+                <path d="M 682 424 v-44 h34 v44" />
+                <path class="soft" d="M 94 704 h230" />
+                <path d="M 122 688 v-64 l46 -34 l46 34 v64" />
+                <path d="M 104 628 l64 -50 l64 50" />
+                <path d="M 168 688 v-34 h24 v34" />
+                <path d="M 244 688 v-54 l40 -30 l40 30 v54" />
+                <path d="M 226 638 l58 -46 l58 46" />
+                <path class="soft" d="M 536 706 h278" />
+                <path d="M 570 706 v-142 h48 v142" />
+                <path d="M 638 706 v-196 h56 v196" />
+                <path d="M 716 706 v-118 h44 v118" />
+                <path d="M 586 610 h14 M 586 654 h14 M 656 556 h14 M 656 600 h14 M 656 644 h14" />
               </g>
+
+              <path
+                data-story-route="0"
+                class="story-route"
+                d="M 0 694 C 122 640, 194 580, 174 496 C 152 406, 260 374, 342 420 C 430 470, 380 574, 494 594 C 610 614, 612 510, 736 512 C 806 514, 842 540, 900 528"
+              />
+              <path
+                data-story-route="1"
+                class="story-route"
+                d="M 0 520 C 142 472, 220 498, 318 456 C 416 414, 460 528, 560 500 C 676 468, 698 358, 812 392 C 860 406, 882 454, 900 498"
+              />
+              <path
+                data-story-route="2"
+                class="story-route"
+                d="M 0 548 C 120 548, 178 508, 260 538 C 350 570, 422 524, 514 548 C 616 574, 600 686, 706 664 C 794 646, 802 536, 900 550"
+              />
+              <path
+                data-story-route="3"
+                class="story-route"
+                d="M 0 548 C 118 572, 184 512, 278 540 C 362 566, 394 634, 482 590 C 562 550, 618 520, 698 548 C 776 576, 808 500, 900 430"
+              />
+              <path
+                data-story-route="4"
+                class="story-route"
+                d="M 0 520 C 120 468, 164 376, 258 398 C 342 420, 342 270, 446 258 C 532 248, 558 390, 486 446 C 408 512, 440 608, 548 610 C 664 612, 686 494, 784 514 C 838 524, 862 574, 900 594"
+              />
             </svg>
           </div>
 
           <div class="story-copy">
             <p class="story-counter" data-story-counter>01 / 05</p>
+            <div class="story-thread" data-story-thread aria-hidden="true">
+              <span data-story-dot="0" class="is-active"></span>
+              <span data-story-dot="1"></span>
+              <span data-story-dot="2"></span>
+              <span data-story-dot="3"></span>
+              <span data-story-dot="4"></span>
+            </div>
             <p class="story-kicker" data-story-kicker>Research trajectory</p>
             <h1 class="story-title" data-story-title>Fernando Miramontes Forattini</h1>
             <p class="story-body" data-story-copy>
@@ -170,155 +299,152 @@ import globalStyles from "../styles/global.css?raw";
           <div
             data-story-step
             data-kicker="Academic agenda"
-            data-title="One line of inquiry, many sites"
+            data-title="One agenda, many sites"
             data-copy="The throughline is a research agenda on power, governance, inequality, and technology as connected social and institutional problems."
-            data-primary-label="View Publications"
-            data-primary-href="#publications"
+            data-primary-label="View Research"
+            data-primary-href="#research"
             data-secondary-label="CV"
-            data-secondary-href="#cv"
+            data-secondary-href="/cv/fernando-miramontes-forattini-cv.docx"
           ></div>
         </div>
       </section>
 
       <div class="content">
-        <section class="panel" id="agenda" aria-labelledby="agenda-title">
+        <section class="panel agenda-panel" id="agenda" aria-labelledby="agenda-title">
           <div class="panel-inner">
             <div>
               <p class="section-kicker">Agenda</p>
               <h2 class="section-title" id="agenda-title">Power, institutions, technologies.</h2>
               <p class="section-copy">
-                I am a historical sociologist and interdisciplinary social scientist. My research
-                examines how institutions, norms, classifications, and technical systems organize
-                authority, produce vulnerabilities, and shape contemporary forms of governance.
+                My work connects historical sociology and sociotechnical analysis to examine how
+                governance is built, contested, and redesigned. Across archives, public services,
+                classification systems, digital platforms, and AI, I study how authority is organized
+                and how vulnerability is produced.
+              </p>
+              <p class="section-copy secondary-copy">
+                I bring extensive international experience, strong academic networks, and a
+                trajectory marked by a Marie Skłodowska-Curie Actions Postdoctoral Fellowship,
+                doctoral support linked to the University of Chicago, and publications with
+                Cambridge University Press, Oxford University Press, MIT Press, American
+                Behavioral Scientist, and other leading venues.
               </p>
               <div class="prestige-strip" aria-label="Academic affiliations and venues">
                 <span>MSCA Fellow</span>
-                <span>Dublin City University</span>
-                <span>Research Ireland</span>
                 <span>University of Chicago</span>
                 <span>Cambridge University Press</span>
                 <span>Oxford University Press</span>
-                <span>MIT Press</span>
               </div>
             </div>
 
             <div class="agenda-line" aria-hidden="true">
-              <svg class="mini-line" viewBox="0 0 640 520">
-                <path d="M42 420 C112 354 178 326 240 336 C316 348 336 424 414 396 C494 368 500 258 426 228 C342 194 248 264 202 184 C162 112 238 56 326 98 C428 146 408 238 502 238 C568 238 594 188 566 142" />
-                <rect x="86" y="252" width="92" height="116" rx="2" />
-                <path d="M86 252 l46 -44 l46 44" />
-                <circle cx="304" cy="178" r="52" />
-                <path d="M266 214 c24 28 74 30 104 4" />
-                <circle cx="466" cy="330" r="26" />
-                <circle cx="526" cy="278" r="18" />
-                <circle cx="558" cy="354" r="20" />
-                <path d="M486 316 l24 -26" />
-                <path d="M490 338 l48 12" />
-              </svg>
+              <img class="agenda-image" src="/agenda/agenda-scr.png" alt="" loading="lazy" />
             </div>
           </div>
         </section>
 
-        <section class="panel dark" id="research" aria-labelledby="research-title">
+        <section class="panel dark research-panel" id="research" aria-labelledby="research-title">
           <div>
             <p class="section-kicker">Research</p>
-            <h2 class="section-title" id="research-title">Three clusters, one problem.</h2>
+            <h2 class="section-title" id="research-title">Three clusters, one question.</h2>
             <p class="section-copy">
-              The work moves across historical sociology, governance, inequality, and information systems,
-              but the analytic question remains consistent: how do social orders become durable, contested,
-              and technologically mediated?
+              How do institutions, classifications, and technologies organize power, produce
+              vulnerability, and reshape governance?
             </p>
           </div>
 
           <div class="cluster-grid">
-            <article class="cluster-card">
+            <a class="cluster-card" href="/research/#governance" aria-label="View governance, corruption, and institutional power research cluster">
               <span class="cluster-number">01</span>
+              <svg class="cluster-motif" viewBox="0 0 260 180" aria-hidden="true">
+                <path d="M28 145 H230" />
+                <path d="M58 145 V84 l54 -38 l54 38 v61" />
+                <path d="M74 90 h76" />
+                <path d="M112 46 v-28" />
+                <path d="M112 18 h64 l-18 20 l18 20 h-64" />
+                <path d="M184 145 V72 h38 v73" />
+                <path d="M66 145 v-44 h28 v44" />
+                <path d="M118 145 v-44 h28 v44" />
+              </svg>
               <div>
                 <h3>Governance, corruption, and institutional power</h3>
                 <p>
-                  Anti-corruption reforms, public services, state capacity, opacity, institutional change,
-                  and the historical sociology of governance.
+                  Anti-corruption reform, public services, state capacity, opacity, and the
+                  historical sociology of governance.
                 </p>
               </div>
-            </article>
-            <article class="cluster-card">
+              <span class="cluster-link">View cluster →</span>
+            </a>
+            <a class="cluster-card" href="/research/#classification" aria-label="View inequality, classification, and recognition research cluster">
               <span class="cluster-number">02</span>
+              <svg class="cluster-motif" viewBox="0 0 260 180" aria-hidden="true">
+                <path d="M42 38 h58 v44 h-58 z" />
+                <path d="M160 38 h58 v44 h-58 z" />
+                <path d="M42 116 h58 v44 h-58 z" />
+                <path d="M160 116 h58 v44 h-58 z" />
+                <path d="M100 60 h60" />
+                <path d="M130 60 v78" />
+                <path d="M100 138 h60" />
+                <path d="M62 60 h18 M180 60 h18 M62 138 h18 M180 138 h18" />
+              </svg>
               <div>
                 <h3>Inequality, classification, and recognition</h3>
                 <p>
-                  Race, Indigeneity, identity categories, social vulnerability, environmental destruction,
-                  and how classification systems shape political life.
+                  Race, Indigeneity, identity categories, social vulnerability, and the politics of
+                  classification.
                 </p>
               </div>
-            </article>
-            <article class="cluster-card">
+              <span class="cluster-link">View cluster →</span>
+            </a>
+            <a class="cluster-card" href="/research/#technology" aria-label="View technology, AI, and sociotechnical governance research cluster">
               <span class="cluster-number">03</span>
+              <svg class="cluster-motif" viewBox="0 0 260 180" aria-hidden="true">
+                <path d="M34 48 h128 v86 h-128 z" />
+                <path d="M62 72 h64" />
+                <path d="M62 98 h34 l22 -18 l30 34" />
+                <path d="M82 134 v24" />
+                <path d="M62 158 h72" />
+                <circle cx="198" cy="40" r="12" />
+                <circle cx="224" cy="94" r="12" />
+                <circle cx="184" cy="140" r="12" />
+                <circle cx="170" cy="86" r="9" />
+                <path d="M205 50 l14 32" />
+                <path d="M214 102 l-22 28" />
+                <path d="M178 90 l34 2" />
+              </svg>
               <div>
                 <h3>Technology, AI, and sociotechnical governance</h3>
                 <p>
                   Digital public services, responsible AI, care ethics, gendered harm, information systems,
-                  and institutional conditions for technical change.
+                  and institutional accountability.
                 </p>
               </div>
-            </article>
+              <span class="cluster-link">View cluster →</span>
+            </a>
           </div>
         </section>
 
-        <section class="panel" id="publications" aria-labelledby="publications-title">
+        <section class="panel" id="teaching" aria-labelledby="teaching-title">
           <div>
-            <p class="section-kicker">Publications</p>
-            <h2 class="section-title" id="publications-title">Publications as research architecture.</h2>
+            <p class="section-kicker">Teaching</p>
+            <h2 class="section-title" id="teaching-title">Historical depth, technical literacy.</h2>
             <p class="section-copy">
-              A selected set of publications and forthcoming work. The full site can later turn this into
-              a filterable publications archive with DOI, BibTeX, and downloadable PDFs.
+              Teaching spans historical sociology, theory, governance, inequality, digital transformation,
+              AI, sustainable innovation, and research methods in the social sciences.
             </p>
           </div>
 
-          <div class="work-grid">
-            <article class="work-card featured">
-              <div>
-                <p class="meta">American Behavioral Scientist · 2026</p>
-                <h3>Beyond “best practices”: A historical-sociological critique of privatization, decentralization, and anti-corruption reforms in 1990s Brazil.</h3>
-              </div>
-              <p>
-                A bridge between historical sociology, governance reform, and institutional critique.
-              </p>
+          <div class="teaching-grid">
+            <article class="teaching-card">
+              <h3>Digital transformation and sustainable change</h3>
+              <p>Governance, organizational change, institutional trust, and social impacts of technology.</p>
             </article>
-
-            <article class="work-card">
-              <p class="meta">MIT Press · 2026</p>
-              <h3>The rise and evolution of anti-corruption impulses in the United States and Brazil.</h3>
-              <div class="tag-row">
-                <span class="tag">Governance</span>
-                <span class="tag">Historical Sociology</span>
-              </div>
+            <article class="teaching-card">
+              <h3>AI and sustainable innovation</h3>
+              <p>Artificial intelligence, inequality, institutional conditions, and responsible innovation.</p>
             </article>
-
-            <article class="work-card">
-              <p class="meta">Oxford University Press · 2026</p>
-              <h3>The weight of the “pardo” category: Official statistics and the deracialization of Indigenous peoples.</h3>
-              <div class="tag-row">
-                <span class="tag">Classification</span>
-                <span class="tag">Inequality</span>
-              </div>
-            </article>
-
-            <article class="work-card">
-              <p class="meta">ACM SIGMIS Database · 2025</p>
-              <h3>Breaking boundaries: Advancing gender and technology research to combat sextortion.</h3>
-              <div class="tag-row">
-                <span class="tag">Technology</span>
-                <span class="tag">Gender</span>
-              </div>
-            </article>
-
-            <article class="work-card">
-              <p class="meta">Information Systems Management · 2026</p>
-              <h3>Prometheus ambition, Zeusian order: Why leaps in information systems require structurally aware ethical frameworks.</h3>
-              <div class="tag-row">
-                <span class="tag">AI Ethics</span>
-                <span class="tag">Institutions</span>
-              </div>
+            <article class="teaching-card">
+              <h3>Historical sociology and methods</h3>
+              <p>Comparative historical analysis, qualitative coding, institutional analysis, and social data.</p>
             </article>
           </div>
         </section>
@@ -358,74 +484,6 @@ import globalStyles from "../styles/global.css?raw";
                 and applied institutional analysis.
               </p>
             </article>
-            <article class="project-card">
-              <p class="meta">Public voice</p>
-              <h3>Media, essays, and invited talks</h3>
-              <p>
-                Commentary and invited lectures on corruption, technology, inequality, AI,
-                governance, and public policy across academic and public venues.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="panel" id="teaching" aria-labelledby="teaching-title">
-          <div>
-            <p class="section-kicker">Teaching</p>
-            <h2 class="section-title" id="teaching-title">Historical depth, technical literacy.</h2>
-            <p class="section-copy">
-              Teaching spans historical sociology, theory, governance, inequality, digital transformation,
-              AI, sustainable innovation, and research methods in the social sciences.
-            </p>
-          </div>
-
-          <div class="teaching-grid">
-            <article class="teaching-card">
-              <h3>Digital transformation and sustainable change</h3>
-              <p>Governance, organizational change, institutional trust, and social impacts of technology.</p>
-            </article>
-            <article class="teaching-card">
-              <h3>AI and sustainable innovation</h3>
-              <p>Artificial intelligence, inequality, institutional conditions, and responsible innovation.</p>
-            </article>
-            <article class="teaching-card">
-              <h3>Historical sociology and methods</h3>
-              <p>Comparative historical analysis, qualitative coding, institutional analysis, and social data.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="panel" id="cv" aria-labelledby="cv-title">
-          <div>
-            <p class="section-kicker">CV</p>
-            <h2 class="section-title" id="cv-title">Academic profile at a glance.</h2>
-            <p class="section-copy">
-              A concise version of the curriculum vitae, organized around current appointment,
-              training, editorial work, and selected areas of teaching and research.
-            </p>
-          </div>
-
-          <div class="cv-grid">
-            <article class="cv-card">
-              <p class="meta">Current</p>
-              <h3>Marie Skłodowska-Curie Postdoctoral Fellow</h3>
-              <p>Dublin City University / Research Ireland, 2024-2026.</p>
-            </article>
-            <article class="cv-card">
-              <p class="meta">Education</p>
-              <h3>PhD in Social History</h3>
-              <p>Pontifícia Universidade Católica de São Paulo, with visiting doctoral research at the University of Chicago.</p>
-            </article>
-            <article class="cv-card">
-              <p class="meta">Editorial</p>
-              <h3>Senior Editor</h3>
-              <p>Information Systems Management, Taylor & Francis, 2025-present.</p>
-            </article>
-            <article class="cv-card">
-              <p class="meta">Fields</p>
-              <h3>Historical sociology, governance, inequality, and technology</h3>
-              <p>Research and teaching across institutional analysis, digital governance, AI, classification, and methods.</p>
-            </article>
           </div>
         </section>
 
@@ -450,7 +508,8 @@ import globalStyles from "../styles/global.css?raw";
                 <a href="#" aria-disabled="true">Google Scholar <span>soon</span></a>
                 <a href="#" aria-disabled="true">ORCID <span>soon</span></a>
                 <a href="#" aria-disabled="true">LinkedIn <span>soon</span></a>
-                <a href="#cv">CV <span>view</span></a>
+                <a href="https://github.com/Miramontes1985">GitHub <span>↗</span></a>
+                <a class="download-link" href="/cv/fernando-miramontes-forattini-cv.docx" download>Download CV <span>↓</span></a>
               </div>
             </article>
           </div>
