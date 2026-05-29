@@ -26,7 +26,7 @@ import globalStyles from "../styles/global.css?raw";
         <a href="#research">Research</a>
         <a href="/publications/">Publications</a>
         <a href="#teaching">Teaching</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Applied Work</a>
         <a href="/cv/fernando-miramontes-forattini-cv.docx" download>CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -423,93 +423,184 @@ import globalStyles from "../styles/global.css?raw";
           </div>
         </section>
 
-        <section class="panel" id="teaching" aria-labelledby="teaching-title">
+        <section class="panel teaching-panel" id="teaching" aria-labelledby="teaching-title">
           <div>
             <p class="section-kicker">Teaching</p>
             <h2 class="section-title" id="teaching-title">Historical depth, technical literacy.</h2>
             <p class="section-copy">
-              Teaching spans historical sociology, theory, governance, inequality, digital transformation,
-              AI, sustainable innovation, and research methods in the social sciences.
+              Teaching connects historical sociology, governance, inequality, digital transformation,
+              responsible AI, and applied social research methods. The emphasis is on helping
+              students understand institutions, analyze evidence, work with social data, and evaluate
+              digital systems in context.
             </p>
           </div>
 
-          <div class="teaching-grid">
-            <article class="teaching-card">
-              <h3>Digital transformation and sustainable change</h3>
-              <p>Governance, organizational change, institutional trust, and social impacts of technology.</p>
-            </article>
-            <article class="teaching-card">
-              <h3>AI and sustainable innovation</h3>
-              <p>Artificial intelligence, inequality, institutional conditions, and responsible innovation.</p>
-            </article>
-            <article class="teaching-card">
-              <h3>Historical sociology and methods</h3>
-              <p>Comparative historical analysis, qualitative coding, institutional analysis, and social data.</p>
-            </article>
+          <div class="teaching-clusters">
+            <section class="teaching-cluster" aria-labelledby="teaching-methods">
+              <p class="teaching-cluster-title" id="teaching-methods">Historical sociology and social research methods</p>
+              <div class="teaching-pair">
+                <article class="teaching-card">
+                  <h3>Comparative-historical sociology</h3>
+                  <p>
+                    Historical analysis of institutions, political conflict, state formation,
+                    corruption, reform, and long-term social change using archival, documentary,
+                    and comparative methods.
+                  </p>
+                </article>
+                <article class="teaching-card">
+                  <h3>Computational and mixed methods for social science</h3>
+                  <p>
+                    Qualitative coding, interviews, focus groups, survey data, social data analysis,
+                    visualization, and introductory R/Python workflows for social research.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="teaching-cluster" aria-labelledby="teaching-governance">
+              <p class="teaching-cluster-title" id="teaching-governance">Governance, inequality, and cultural analysis</p>
+              <div class="teaching-pair">
+                <article class="teaching-card">
+                  <h3>Structures, Movements and Institutional power</h3>
+                  <p>
+                    Public institutions, anti-corruption, accountability, administrative opacity,
+                    state capacity, public services, and institutional vulnerability.
+                  </p>
+                </article>
+                <article class="teaching-card">
+                  <h3>Classification, identity, and cultural politics</h3>
+                  <p>
+                    Race, Indigeneity, identity categories, cultural repertoires, media, political
+                    imagination, recognition, and classification systems.
+                  </p>
+                </article>
+              </div>
+            </section>
+
+            <section class="teaching-cluster" aria-labelledby="teaching-technology">
+              <p class="teaching-cluster-title" id="teaching-technology">Technology, AI, and sociotechnical systems</p>
+              <div class="teaching-pair">
+                <article class="teaching-card">
+                  <h3>Digital sociology, AI, and society</h3>
+                  <p>
+                    Digital platforms, data infrastructures, algorithmic power, AI and inequality,
+                    digital transformation, and the social consequences of technical systems.
+                  </p>
+                </article>
+                <article class="teaching-card">
+                  <h3>Responsible AI, GovTech, and sociotechnical design</h3>
+                  <p>
+                    Responsible AI, digital public services, AI agents, dashboards, prototyping,
+                    sociotechnical evaluation, ethics, care, accountability, and public innovation.
+                  </p>
+                </article>
+              </div>
+            </section>
           </div>
         </section>
 
         <section class="panel dark" id="projects" aria-labelledby="projects-title">
           <div>
-            <p class="section-kicker">Projects</p>
-            <h2 class="section-title" id="projects-title">From scholarship to public systems.</h2>
+            <p class="section-kicker">Applied Work</p>
+            <h2 class="section-title" id="projects-title">From research to public outcomes.</h2>
             <p class="section-copy">
-              The public-facing work connects sociological analysis to policy, digital governance,
-              responsible innovation, and institutions concerned with inequality and accountability.
+              This work connects academic research to editorial service, peer review, research
+              infrastructure, policy engagement, public communication, and applied digital systems.
             </p>
           </div>
 
           <div class="project-grid">
             <article class="project-card">
-              <p class="meta">Current agenda</p>
-              <h3>Digital governance and safer public services</h3>
+              <p class="meta">Research software and digital infrastructure</p>
+              <h3>SaferGov</h3>
               <p>
-                Research on sexual corruption, public service encounters, gendered vulnerability,
-                and the design of technological systems that do not reproduce institutional harm.
+                A GovTech platform integrating sociological and governance insights with NLP
+                pipelines, LLM-assisted guidance, responsible AI principles, and blockchain-based
+                evidence anchoring for secure reporting and accountability.
               </p>
+              <span class="project-action">View platform →</span>
             </article>
             <article class="project-card">
-              <p class="meta">AI and auditability</p>
-              <h3>AI agents in gender-sensitive public service encounters</h3>
+              <p class="meta">Editorial leadership</p>
+              <h3>Senior Editor, Information Systems Management</h3>
               <p>
-                Work on auditing AI agents through sociological, ethical, and institutional lenses,
-                with attention to stronger configurations, care, and evidence traceability.
+                Editorial service in a Q1 Information Systems journal, supporting scholarly
+                evaluation and field development in digital transformation, governance, and
+                sociotechnical research.
               </p>
+              <span class="project-action">Editorial work →</span>
             </article>
             <article class="project-card">
-              <p class="meta">Policy and civil society</p>
-              <h3>SDGs, governance, and public accountability</h3>
+              <p class="meta">Peer review and academic evaluation</p>
+              <h3>Reviewer for leading journals and conferences</h3>
               <p>
-                Engagement with ODS 9 and 16, anti-corruption policy, digital governance,
-                and applied institutional analysis.
+                Reviewer for venues including European Journal of Information Systems, ACM SIGMIS
+                Database, ECIS, HICSS, Projeto História, Cogent Arts & Humanities, and Revista
+                Mediações.
               </p>
+              <span class="project-action">Review activity →</span>
+            </article>
+            <article class="project-card">
+              <p class="meta">Conference leadership</p>
+              <h3>HICSS Gender and Technology mini-track</h3>
+              <p>
+                Co-coordinator of the Gender and Technology mini-track at the 58th Hawaii
+                International Conference on System Sciences, supporting interdisciplinary work on
+                technology, gender, and institutions.
+              </p>
+              <span class="project-action">Conference service →</span>
+            </article>
+            <article class="project-card">
+              <p class="meta">Competitive funding and research assessment</p>
+              <h3>MSCA application reviewer</h3>
+              <p>
+                Evaluator of Marie Skłodowska-Curie Actions applications, with experience in
+                competitive research assessment, proposal development, and international funding
+                environments.
+              </p>
+              <span class="project-action">Research assessment →</span>
+            </article>
+            <article class="project-card">
+              <p class="meta">Public policy, media, and civil society</p>
+              <h3>Governance, SDGs, and public accountability</h3>
+              <p>
+                Engagement with ODS 9 and 16, anti-corruption policy, the American Bar Association,
+                Revista Humanitas, and media commentary on corruption, governance, technology, and
+                public policy.
+              </p>
+              <span class="project-action">Public engagement →</span>
             </article>
           </div>
         </section>
 
-        <section class="panel contact-panel" id="contact" aria-labelledby="contact-title">
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
           <div>
-            <p class="section-kicker">Contact</p>
-            <h2 class="section-title" id="contact-title">For research, teaching, and collaboration.</h2>
+            <p class="contact-kicker">Contact</p>
+            <h2 class="contact-title" id="contact-title">Contact me.</h2>
           </div>
 
-          <div class="contact-grid">
-            <article class="contact-card">
-              <h3>Fernando Miramontes Forattini, PhD</h3>
-              <p>
+          <div class="contact-panel">
+            <article class="contact-identity">
+              <h3 class="contact-name">Fernando Miramontes Forattini, PhD</h3>
+              <p class="contact-meta">
                 Marie Skłodowska-Curie Postdoctoral Fellow<br />
-                Dublin City University / Research Ireland
+                Dublin City University / Lero, Research Ireland Centre for Software
+              </p>
+              <p class="contact-note">
+                Research, teaching, and public engagement across governance, inequality, digital
+                public services, and responsible AI.
               </p>
             </article>
-            <article class="contact-card">
-              <h3>Links</h3>
-              <div class="link-list">
-                <a href="mailto:fernandomforattini@gmail.com">Email <span>↗</span></a>
-                <a href="#" aria-disabled="true">Google Scholar <span>soon</span></a>
-                <a href="#" aria-disabled="true">ORCID <span>soon</span></a>
-                <a href="#" aria-disabled="true">LinkedIn <span>soon</span></a>
-                <a href="https://github.com/Miramontes1985">GitHub <span>↗</span></a>
-                <a class="download-link" href="/cv/fernando-miramontes-forattini-cv.docx" download>Download CV <span>↓</span></a>
+
+            <article class="contact-links">
+              <h3 class="contact-links-title">Links</h3>
+              <div class="contact-link-list">
+                <a class="contact-link" href="mailto:fernandomforattini@gmail.com">Email <span class="arrow">↗</span></a>
+                <a class="contact-link" href="https://scholar.google.com/citations?user=uwh-tBIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar <span class="arrow">↗</span></a>
+                <a class="contact-link" href="https://orcid.org/0000-0002-8431-8555" target="_blank" rel="noreferrer">ORCID <span class="arrow">↗</span></a>
+                <a class="contact-link" href="https://www.linkedin.com/in/fernandomiramontesforattini/" target="_blank" rel="noreferrer">LinkedIn <span class="arrow">↗</span></a>
+                <a class="contact-link" href="https://github.com/Miramontes1985" target="_blank" rel="noreferrer">GitHub <span class="arrow">↗</span></a>
+                <a class="contact-link cv" href="/cv/fernando-miramontes-forattini-cv.docx" download>Download CV <span class="arrow">↓</span></a>
               </div>
             </article>
           </div>
@@ -518,8 +609,7 @@ import globalStyles from "../styles/global.css?raw";
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 Fernando Miramontes Forattini</span>
-      <span>fernandomforattini.com</span>
+      <span>© Fernando Miramontes Forattini · Historical Sociology · Governance · Technology</span>
     </footer>
 
     <script>
