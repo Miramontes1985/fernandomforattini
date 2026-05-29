@@ -99,21 +99,21 @@ textarea {
 }
 
 .brand-sub {
-  color: var(--muted);
-  font-size: 0.62rem;
+  color: rgba(21, 21, 20, 0.62);
+  font-size: 0.68rem;
   letter-spacing: 0.16em;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: clamp(16px, 2.4vw, 34px);
+  gap: clamp(12px, 1.45vw, 22px);
   border: 1px solid rgba(21, 21, 20, 0.08);
   border-radius: 999px;
   padding: 11px 18px;
   background: rgba(247, 245, 239, 0.72);
   color: rgba(21, 21, 20, 0.78);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -182,9 +182,9 @@ textarea {
 
 .story-line {
   position: absolute;
-  inset: auto -9vw -10vh -5vw;
-  width: 114vw;
-  height: 95vh;
+  inset: auto -6vw -8vh auto;
+  width: 65vw;
+  height: 84vh;
   overflow: visible;
 }
 
@@ -197,15 +197,15 @@ textarea {
 }
 
 .story-route {
-  stroke-width: 3.4;
+  stroke-width: 2.8;
 }
 
 .story-drawing {
-  stroke-width: 3;
+  stroke-width: 2.7;
   opacity: 0;
   transition:
-    opacity 700ms ease,
-    transform 900ms ease;
+    opacity 240ms ease,
+    transform 420ms ease;
   transform: translateY(16px);
 }
 
@@ -247,24 +247,39 @@ textarea {
   max-width: 13ch;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.2rem, 7vw, 7.4rem);
+  font-size: clamp(3rem, 6.1vw, 6.35rem);
   font-weight: 400;
-  line-height: 0.94;
+  line-height: 0.98;
 }
 
 .story-body {
   max-width: 39rem;
   margin: 28px 0 0;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.15vw, 1.12rem);
+  color: rgba(21, 21, 20, 0.68);
+  font-size: clamp(1.04rem, 1.16vw, 1.16rem);
   line-height: 1.7;
 }
 
 .story-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
   margin-top: 34px;
+  max-height: 128px;
+  overflow: hidden;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    max-height 220ms ease,
+    margin-top 220ms ease;
+}
+
+.story-actions.is-hidden {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
 }
 
 .button {
@@ -295,6 +310,10 @@ textarea {
 
 .button:hover {
   transform: translateY(-2px);
+}
+
+.button.is-hidden {
+  display: none;
 }
 
 .scroll-hint,
@@ -371,7 +390,7 @@ textarea {
 .section-title {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.7rem, 5.8vw, 6.6rem);
+  font-size: clamp(2.55rem, 5.2vw, 5.8rem);
   font-weight: 400;
   line-height: 0.98;
 }
@@ -379,8 +398,8 @@ textarea {
 .section-copy {
   max-width: 720px;
   margin: 34px 0 0;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  color: rgba(21, 21, 20, 0.68);
+  font-size: clamp(1.04rem, 1.24vw, 1.2rem);
   line-height: 1.72;
 }
 
@@ -431,7 +450,8 @@ textarea {
 .cluster-grid,
 .work-grid,
 .project-grid,
-.teaching-grid {
+.teaching-grid,
+.cv-grid {
   display: grid;
   gap: 14px;
 }
@@ -444,6 +464,7 @@ textarea {
 .work-card,
 .project-card,
 .teaching-card,
+.cv-card,
 .contact-card {
   border: 1px solid var(--border);
   padding: clamp(24px, 3vw, 34px);
@@ -460,6 +481,7 @@ textarea {
 .work-card h3,
 .project-card h3,
 .teaching-card h3,
+.cv-card h3,
 .contact-card h3 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
@@ -472,6 +494,7 @@ textarea {
 .work-card p,
 .project-card p,
 .teaching-card p,
+.cv-card p,
 .contact-card p {
   margin: 20px 0 0;
   color: var(--muted);
@@ -532,6 +555,14 @@ textarea {
 
 .teaching-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cv-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cv-card {
+  min-height: 260px;
 }
 
 .contact-panel {
@@ -624,15 +655,16 @@ textarea {
   }
 
   .story-line {
-    inset: auto -46vw -5vh -34vw;
-    width: 168vw;
-    height: 76vh;
+    inset: auto -34vw -8vh auto;
+    width: 132vw;
+    height: 70vh;
   }
 
   .cluster-grid,
   .work-grid,
   .project-grid,
   .teaching-grid,
+  .cv-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -666,22 +698,23 @@ textarea {
 
   .story-copy {
     top: 40%;
+    width: min(340px, calc(100vw - 40px));
   }
 
   .story-title {
     max-width: 8.8ch;
-    font-size: clamp(2.75rem, 12vw, 4rem);
+    font-size: clamp(2.5rem, 10.8vw, 3.7rem);
     line-height: 1;
   }
 
   .story-body {
-    font-size: 1rem;
+    font-size: 1.02rem;
   }
 
   .story-line {
-    inset: auto -108vw -8vh auto;
-    width: 216vw;
-    height: 48vh;
+    inset: auto -106vw -7vh auto;
+    width: 210vw;
+    height: 46vh;
     opacity: 0.62;
     transform: translateY(10vh);
   }
@@ -705,6 +738,7 @@ textarea {
   .work-card,
   .project-card,
   .teaching-card,
+  .cv-card,
   .contact-card {
     min-height: auto;
   }

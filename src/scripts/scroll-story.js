@@ -4,6 +4,9 @@ const title = document.querySelector("[data-story-title]");
 const kicker = document.querySelector("[data-story-kicker]");
 const copy = document.querySelector("[data-story-copy]");
 const counter = document.querySelector("[data-story-counter]");
+const actions = document.querySelector("[data-story-actions]");
+const primaryAction = document.querySelector("[data-story-primary]");
+const secondaryAction = document.querySelector("[data-story-secondary]");
 const panels = Array.from(document.querySelectorAll("[data-story-step]"));
 const drawings = Array.from(document.querySelectorAll("[data-drawing]"));
 
@@ -17,6 +20,23 @@ const setText = (index) => {
   kicker.textContent = panel.dataset.kicker || "";
   copy.textContent = panel.dataset.copy || "";
   counter.textContent = `${String(index + 1).padStart(2, "0")} / ${String(panels.length).padStart(2, "0")}`;
+
+  const hasPrimary = panel.dataset.primaryLabel && panel.dataset.primaryHref;
+  const hasSecondary = panel.dataset.secondaryLabel && panel.dataset.secondaryHref;
+
+  actions?.classList.toggle("is-hidden", !hasPrimary && !hasSecondary);
+
+  if (primaryAction) {
+    primaryAction.textContent = panel.dataset.primaryLabel || "";
+    primaryAction.href = panel.dataset.primaryHref || "#";
+    primaryAction.classList.toggle("is-hidden", !hasPrimary);
+  }
+
+  if (secondaryAction) {
+    secondaryAction.textContent = panel.dataset.secondaryLabel || "";
+    secondaryAction.href = panel.dataset.secondaryHref || "#";
+    secondaryAction.classList.toggle("is-hidden", !hasSecondary);
+  }
 
   drawings.forEach((drawing) => {
     drawing.classList.toggle("is-visible", drawing.dataset.drawing === String(index));
