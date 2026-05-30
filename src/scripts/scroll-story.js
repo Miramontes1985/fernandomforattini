@@ -51,8 +51,8 @@ let activeIndex = -1;
 
 const updateImages = (index, segmentProgress) => {
   const imageProgress = easeOut(segmentProgress);
-  const opacity = 0.18 + imageProgress * 0.64;
-  const scale = 1.02 + imageProgress * 0.035;
+  const opacity = index === panels.length - 1 ? 0.98 : 0.9;
+  const scale = 1 + imageProgress * 0.026;
 
   images.forEach((image) => {
     if (image.dataset.storyImage === String(index)) {
@@ -61,7 +61,7 @@ const updateImages = (index, segmentProgress) => {
       image.style.setProperty("--story-image-progress", imageProgress.toFixed(3));
     } else {
       image.style.setProperty("--story-image-opacity", "0");
-      image.style.setProperty("--story-image-scale", "1.02");
+      image.style.setProperty("--story-image-scale", "1");
       image.style.setProperty("--story-image-progress", "0");
     }
   });
