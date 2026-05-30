@@ -2,20 +2,20 @@
 import { allPublicationSections, type Locale } from "../../data/publications";
 import globalStyles from "../../styles/global.css?raw";
 
-const locale: Locale = "pt";
+const locale: Locale = "es";
 const totalItems = allPublicationSections.reduce((total, section) => total + section.items.length, 0);
 ---
 
 <!doctype html>
-<html lang="pt-BR">
+<html lang="es-419">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Textos selecionados de Fernando Miramontes Forattini em sociologia histórica, governança, desigualdade e sistemas sociotécnicos."
+      content="Textos seleccionados de Fernando Miramontes Forattini en sociología histórica, gobernanza, desigualdad y sistemas sociotécnicos."
     />
-    <title>Textos Selecionados | Fernando Miramontes Forattini</title>
+    <title>Textos Seleccionados | Fernando Miramontes Forattini</title>
     <link rel="icon" type="image/svg+xml" sizes="any" href="/research-icon.svg?v=2" />
     <link rel="shortcut icon" href="/research-icon.svg?v=2" />
     <link rel="alternate" hreflang="en" href="https://fernandomforattini.com/publications/" />
@@ -24,47 +24,47 @@ const totalItems = allPublicationSections.reduce((total, section) => total + sec
     <style is:global set:html={globalStyles}></style>
   </head>
   <body>
-    <header class="site-header" aria-label="Cabeçalho do site">
-      <a class="brand" href="/pt/" aria-label="Página inicial de Fernando Miramontes Forattini">
+    <header class="site-header" aria-label="Encabezado del sitio">
+      <a class="brand" href="/es/" aria-label="Página inicial de Fernando Miramontes Forattini">
         <span class="brand-mark">Fernando Miramontes Forattini</span>
-        <span class="brand-sub">Sociologia Histórica · Governança · Tecnologia</span>
+        <span class="brand-sub">Sociología Histórica · Gobernanza · Tecnología</span>
       </a>
 
-      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Navegação principal">
-        <a href="/pt/research/">Pesquisa</a>
-        <a href="/pt/publications/">Publicações</a>
-        <a href="/pt/#teaching">Ensino</a>
-        <a href="/pt/#projects">Atuação</a>
-        <a href="/cv/fernando-miramontes-forattini-cv-portuguese.pdf" download>CV</a>
-        <a href="/pt/#contact">Contato</a>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Navegación principal">
+        <a href="/es/research/">Investigación</a>
+        <a href="/es/publications/">Publicaciones</a>
+        <a href="/es/#teaching">Docencia</a>
+        <a href="/es/#projects">Trabajo aplicado</a>
+        <a href="/cv/fernando-miramontes-forattini-cv-english.pdf" download>CV</a>
+        <a href="/es/#contact">Contacto</a>
       </nav>
 
-      <div class="language-switcher" aria-label="Seletor de idioma">
+      <div class="language-switcher" aria-label="Selector de idioma">
         <a href="/publications/">EN</a>
-        <a class="is-active" href="/pt/publications/" aria-current="page">PT</a>
-        <a href="/es/publications/">ES</a>
+        <a href="/pt/publications/">PT</a>
+        <a class="is-active" href="/es/publications/" aria-current="page">ES</a>
       </div>
 
       <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-nav">
         <span class="menu-lines" aria-hidden="true"></span>
-        <span class="sr-only">Abrir menu</span>
+        <span class="sr-only">Abrir menú</span>
       </button>
     </header>
 
     <main class="subpage-main">
       <section class="subpage-hero">
-        <p class="section-kicker">Publicações</p>
-        <h1 class="section-title">Textos selecionados.</h1>
+        <p class="section-kicker">Publicaciones</p>
+        <h1 class="section-title">Textos seleccionados.</h1>
         <p class="section-copy">
-          Lista selecionada da produção acadêmica, organizada por linha de pesquisa e seguida por
-          livros e livros organizados.
+          Lista seleccionada de producción académica, organizada por línea de investigación y seguida por
+          libros y libros editados.
         </p>
         <p class="publication-source-link">
-          Para uma lista mais completa de publicações, consulte o
-          <a href="https://scholar.google.com/citations?user=uwh-tBIAAAAJ&hl=pt-BR" target="_blank" rel="noreferrer">Google Scholar</a>.
+          Para una lista más completa de publicaciones, consulte
+          <a href="https://scholar.google.com/citations?user=uwh-tBIAAAAJ&hl=es" target="_blank" rel="noreferrer">Google Scholar</a>.
         </p>
-        <p class="archive-count">{totalItems} publicações e livros selecionados</p>
-        <nav class="publication-jump-list" aria-label="Seções de publicações">
+        <p class="archive-count">{totalItems} publicaciones y libros seleccionados</p>
+        <nav class="publication-jump-list" aria-label="Secciones de publicaciones">
           {
             allPublicationSections.map((section) => (
               <a href={`#${section.id}`}>
@@ -102,7 +102,7 @@ const totalItems = allPublicationSections.reduce((total, section) => total + sec
 
     <footer class="site-footer">
       <span>© 2026 Fernando Miramontes Forattini</span>
-      <a href="/pt/">Início</a>
+      <a href="/es/">Inicio</a>
     </footer>
 
     <script>
