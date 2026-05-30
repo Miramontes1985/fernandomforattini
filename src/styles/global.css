@@ -1667,7 +1667,7 @@ textarea {
   }
 
   .story-copy {
-    top: 40%;
+    top: 36%;
     width: min(340px, calc(100vw - 40px));
   }
 
@@ -1678,7 +1678,9 @@ textarea {
   }
 
   .story-body {
+    margin-top: 20px;
     font-size: 1.02rem;
+    line-height: 1.55;
   }
 
   .publication-jump-list {
@@ -1712,8 +1714,17 @@ textarea {
 
   .story-actions {
     align-items: stretch;
-    flex-direction: column;
-    max-width: 280px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: min(340px, calc(100vw - 40px));
+    margin-top: 22px;
+  }
+
+  .story-actions .button {
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 0.7rem;
   }
 
   .contact-section {
